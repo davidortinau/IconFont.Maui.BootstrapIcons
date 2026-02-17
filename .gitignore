@@ -1,0 +1,23 @@
+## .NET
+bin/
+obj/
+*.user
+*.suo
+*.vs/
+.vs/
+*.DotSettings.user
+
+## macOS
+.DS_Store
+*.swp
+*~.nib
+
+## NuGet
+*.nupkg
+packages/
+
+## Rider
+.idea/
+
+## VS Code
+.vscode/

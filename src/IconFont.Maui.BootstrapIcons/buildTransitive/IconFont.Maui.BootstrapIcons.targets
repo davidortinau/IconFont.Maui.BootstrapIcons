@@ -1,0 +1,20 @@
+<Project>
+  <Import Project="$(MSBuildThisFileDirectory)IconFont.props" Condition="Exists('$(MSBuildThisFileDirectory)IconFont.props')" />
+
+  <!-- Clear source-relative paths and redefine with package-relative paths -->
+  <ItemGroup>
+    <IconFontDefinition Remove="@(IconFontDefinition)" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <IconFontDefinition Include="$(MSBuildThisFileDirectory)Fonts/bootstrap-icons.ttf">
+      <FontAlias>BootstrapIcons</FontAlias>
+      <FontClass>BootstrapIcons</FontClass>
+      <FontNamespace>IconFont.Maui.BootstrapIcons</FontNamespace>
+    </IconFontDefinition>
+  </ItemGroup>
+
+  <ItemGroup>
+    <MauiFont Include="@(IconFontDefinition)" Alias="%(IconFontDefinition.FontAlias)" />
+  </ItemGroup>
+</Project>

@@ -1,0 +1,16 @@
+<Project>
+  <PropertyGroup>
+    <IconFontFile>bootstrap-icons.ttf</IconFontFile>
+    <IconFontAlias>BootstrapIcons</IconFontAlias>
+    <IconFontClass>BootstrapIcons</IconFontClass>
+    <IconFontNamespace>IconFont.Maui.BootstrapIcons</IconFontNamespace>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <IconFontDefinition Include="Resources/Fonts/bootstrap-icons.ttf">
+      <FontAlias>BootstrapIcons</FontAlias>
+      <FontClass>BootstrapIcons</FontClass>
+      <FontNamespace>IconFont.Maui.BootstrapIcons</FontNamespace>
+    </IconFontDefinition>
+  </ItemGroup>
+</Project>

@@ -1,0 +1,227 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:icons="clr-namespace:IconFont.Maui.BootstrapIcons;assembly=IconFont.Maui.BootstrapIcons"
+             x:Class="IconFont.Maui.BootstrapIcons.Sample.MainPage"
+             Title="Bootstrap Icons">
+
+    <ScrollView>
+        <VerticalStackLayout Padding="30" Spacing="20">
+
+            <!-- Header -->
+            <Label Text="Bootstrap Icons for .NET MAUI"
+                   FontSize="24" FontAttributes="Bold"
+                   HorizontalOptions="Center" />
+            <Label Text="2,000+ icons • One-line setup • Strongly typed"
+                   FontSize="14" TextColor="Gray"
+                   HorizontalOptions="Center" />
+
+            <!-- Icon Grid -->
+            <Label Text="Common Icons" FontSize="18" FontAttributes="Bold" Margin="0,10,0,0" />
+            <Grid ColumnDefinitions="*,*,*,*" RowDefinitions="Auto,Auto,Auto,Auto,Auto,Auto"
+                  ColumnSpacing="10" RowSpacing="15">
+
+                <!-- Row 0 -->
+                <VerticalStackLayout Grid.Row="0" Grid.Column="0" HorizontalOptions="Center" Spacing="4">
+                    <Image WidthRequest="28" HeightRequest="28">
+                        <Image.Source>
+                            <FontImageSource Glyph="{x:Static icons:BootstrapIcons.House}"
+                                             FontFamily="{x:Static icons:BootstrapIcons.FontFamily}"
+                                             Size="28" Color="#212529" />
+                        </Image.Source>
+                    </Image>
+                    <Label Text="House" FontSize="10" HorizontalOptions="Center" />
+                </VerticalStackLayout>
+
+                <VerticalStackLayout Grid.Row="0" Grid.Column="1" HorizontalOptions="Center" Spacing="4">
+                    <Image WidthRequest="28" HeightRequest="28">
+                        <Image.Source>
+                            <FontImageSource Glyph="{x:Static icons:BootstrapIcons.Search}"
+                                             FontFamily="{x:Static icons:BootstrapIcons.FontFamily}"
+                                             Size="28" Color="#212529" />
+                        </Image.Source>
+                    </Image>
+                    <Label Text="Search" FontSize="10" HorizontalOptions="Center" />
+                </VerticalStackLayout>
+
+                <VerticalStackLayout Grid.Row="0" Grid.Column="2" HorizontalOptions="Center" Spacing="4">
+                    <Image WidthRequest="28" HeightRequest="28">
+                        <Image.Source>
+                            <FontImageSource Glyph="{x:Static icons:BootstrapIcons.Gear}"
+                                             FontFamily="{x:Static icons:BootstrapIcons.FontFamily}"
+                                             Size="28" Color="#212529" />
+                        </Image.Source>
+                    </Image>
+                    <Label Text="Gear" FontSize="10" HorizontalOptions="Center" />
+                </VerticalStackLayout>
+
+                <VerticalStackLayout Grid.Row="0" Grid.Column="3" HorizontalOptions="Center" Spacing="4">
+                    <Image WidthRequest="28" HeightRequest="28">
+                        <Image.Source>
+                            <FontImageSource Glyph="{x:Static icons:BootstrapIcons.PersonFill}"
+                                             FontFamily="{x:Static icons:BootstrapIcons.FontFamily}"
+                                             Size="28" Color="#212529" />
+                        </Image.Source>
+                    </Image>
+                    <Label Text="Person" FontSize="10" HorizontalOptions="Center" />
+                </VerticalStackLayout>
+
+                <!-- Row 1 -->
+                <VerticalStackLayout Grid.Row="1" Grid.Column="0" HorizontalOptions="Center" Spacing="4">
+                    <Image WidthRequest="28" HeightRequest="28">
+                        <Image.Source>
+                            <FontImageSource Glyph="{x:Static icons:BootstrapIcons.HeartFill}"
+                                             FontFamily="{x:Static icons:BootstrapIcons.FontFamily}"
+                                             Size="28" Color="#DC3545" />
+                        </Image.Source>
+                    </Image>
+                    <Label Text="Heart" FontSize="10" HorizontalOptions="Center" />
+                </VerticalStackLayout>
+
+                <VerticalStackLayout Grid.Row="1" Grid.Column="1" HorizontalOptions="Center" Spacing="4">
+                    <Image WidthRequest="28" HeightRequest="28">
+                        <Image.Source>
+                            <FontImageSource Glyph="{x:Static icons:BootstrapIcons.StarFill}"
+                                             FontFamily="{x:Static icons:BootstrapIcons.FontFamily}"
+                                             Size="28" Color="#FFC107" />
+                        </Image.Source>
+                    </Image>
+                    <Label Text="Star" FontSize="10" HorizontalOptions="Center" />
+                </VerticalStackLayout>
+
+                <VerticalStackLayout Grid.Row="1" Grid.Column="2" HorizontalOptions="Center" Spacing="4">
+                    <Image WidthRequest="28" HeightRequest="28">
+                        <Image.Source>
+                            <FontImageSource Glyph="{x:Static icons:BootstrapIcons.BellFill}"
+                                             FontFamily="{x:Static icons:BootstrapIcons.FontFamily}"
+                                             Size="28" Color="#0D6EFD" />
+                        </Image.Source>
+                    </Image>
+                    <Label Text="Bell" FontSize="10" HorizontalOptions="Center" />
+                </VerticalStackLayout>
+
+                <VerticalStackLayout Grid.Row="1" Grid.Column="3" HorizontalOptions="Center" Spacing="4">
+                    <Image WidthRequest="28" HeightRequest="28">
+                        <Image.Source>
+                            <FontImageSource Glyph="{x:Static icons:BootstrapIcons.ChatDotsFill}"
+                                             FontFamily="{x:Static icons:BootstrapIcons.FontFamily}"
+                                             Size="28" Color="#198754" />
+                        </Image.Source>
+                    </Image>
+                    <Label Text="Chat" FontSize="10" HorizontalOptions="Center" />
+                </VerticalStackLayout>
+
+                <!-- Row 2 -->
+                <VerticalStackLayout Grid.Row="2" Grid.Column="0" HorizontalOptions="Center" Spacing="4">
+                    <Image WidthRequest="28" HeightRequest="28">
+                        <Image.Source>
+                            <FontImageSource Glyph="{x:Static icons:BootstrapIcons.CartFill}"
+                                             FontFamily="{x:Static icons:BootstrapIcons.FontFamily}"
+                                             Size="28" Color="#6F42C1" />
+                        </Image.Source>
+                    </Image>
+                    <Label Text="Cart" FontSize="10" HorizontalOptions="Center" />
+                </VerticalStackLayout>
+
+                <VerticalStackLayout Grid.Row="2" Grid.Column="1" HorizontalOptions="Center" Spacing="4">
+                    <Image WidthRequest="28" HeightRequest="28">
+                        <Image.Source>
+                            <FontImageSource Glyph="{x:Static icons:BootstrapIcons.CameraFill}"
+                                             FontFamily="{x:Static icons:BootstrapIcons.FontFamily}"
+                                             Size="28" Color="#0DCAF0" />
+                        </Image.Source>
+                    </Image>
+                    <Label Text="Camera" FontSize="10" HorizontalOptions="Center" />
+                </VerticalStackLayout>
+
+                <VerticalStackLayout Grid.Row="2" Grid.Column="2" HorizontalOptions="Center" Spacing="4">
+                    <Image WidthRequest="28" HeightRequest="28">
+                        <Image.Source>
+                            <FontImageSource Glyph="{x:Static icons:BootstrapIcons.CloudArrowUpFill}"
+                                             FontFamily="{x:Static icons:BootstrapIcons.FontFamily}"
+                                             Size="28" Color="#FD7E14" />
+                        </Image.Source>
+                    </Image>
+                    <Label Text="Upload" FontSize="10" HorizontalOptions="Center" />
+                </VerticalStackLayout>
+
+                <VerticalStackLayout Grid.Row="2" Grid.Column="3" HorizontalOptions="Center" Spacing="4">
+                    <Image WidthRequest="28" HeightRequest="28">
+                        <Image.Source>
+                            <FontImageSource Glyph="{x:Static icons:BootstrapIcons.TrashFill}"
+                                             FontFamily="{x:Static icons:BootstrapIcons.FontFamily}"
+                                             Size="28" Color="#DC3545" />
+                        </Image.Source>
+                    </Image>
+                    <Label Text="Trash" FontSize="10" HorizontalOptions="Center" />
+                </VerticalStackLayout>
+            </Grid>
+
+            <!-- Buttons with icons -->
+            <Label Text="Buttons with Icons" FontSize="18" FontAttributes="Bold" Margin="0,10,0,0" />
+
+            <Button Text="  Add to Cart" BackgroundColor="#0D6EFD" TextColor="White">
+                <Button.ImageSource>
+                    <FontImageSource Glyph="{x:Static icons:BootstrapIcons.CartPlusFill}"
+                                     FontFamily="{x:Static icons:BootstrapIcons.FontFamily}"
+                                     Size="20" Color="White" />
+                </Button.ImageSource>
+            </Button>
+
+            <Button Text="  Download" BackgroundColor="#198754" TextColor="White">
+                <Button.ImageSource>
+                    <FontImageSource Glyph="{x:Static icons:BootstrapIcons.Download}"
+                                     FontFamily="{x:Static icons:BootstrapIcons.FontFamily}"
+                                     Size="20" Color="White" />
+                </Button.ImageSource>
+            </Button>
+
+            <Button Text="  Delete" BackgroundColor="#DC3545" TextColor="White">
+                <Button.ImageSource>
+                    <FontImageSource Glyph="{x:Static icons:BootstrapIcons.TrashFill}"
+                                     FontFamily="{x:Static icons:BootstrapIcons.FontFamily}"
+                                     Size="20" Color="White" />
+                </Button.ImageSource>
+            </Button>
+
+            <!-- C# Created Icons -->
+            <Label Text="C# Created Icons" FontSize="18" FontAttributes="Bold" Margin="0,10,0,0" />
+            <HorizontalStackLayout x:Name="CSharpIcons" Spacing="15" HorizontalOptions="Center" />
+
+            <!-- Sizes -->
+            <Label Text="Icon Sizes" FontSize="18" FontAttributes="Bold" Margin="0,10,0,0" />
+            <HorizontalStackLayout Spacing="15" HorizontalOptions="Center" VerticalOptions="Center">
+                <Image WidthRequest="16" HeightRequest="16">
+                    <Image.Source>
+                        <FontImageSource Glyph="{x:Static icons:BootstrapIcons.Bootstrap}"
+                                         FontFamily="{x:Static icons:BootstrapIcons.FontFamily}"
+                                         Size="16" Color="#7952B3" />
+                    </Image.Source>
+                </Image>
+                <Image WidthRequest="24" HeightRequest="24">
+                    <Image.Source>
+                        <FontImageSource Glyph="{x:Static icons:BootstrapIcons.Bootstrap}"
+                                         FontFamily="{x:Static icons:BootstrapIcons.FontFamily}"
+                                         Size="24" Color="#7952B3" />
+                    </Image.Source>
+                </Image>
+                <Image WidthRequest="32" HeightRequest="32">
+                    <Image.Source>
+                        <FontImageSource Glyph="{x:Static icons:BootstrapIcons.Bootstrap}"
+                                         FontFamily="{x:Static icons:BootstrapIcons.FontFamily}"
+                                         Size="32" Color="#7952B3" />
+                    </Image.Source>
+                </Image>
+                <Image WidthRequest="48" HeightRequest="48">
+                    <Image.Source>
+                        <FontImageSource Glyph="{x:Static icons:BootstrapIcons.Bootstrap}"
+                                         FontFamily="{x:Static icons:BootstrapIcons.FontFamily}"
+                                         Size="48" Color="#7952B3" />
+                    </Image.Source>
+                </Image>
+            </HorizontalStackLayout>
+
+        </VerticalStackLayout>
+    </ScrollView>
+
+</ContentPage>
