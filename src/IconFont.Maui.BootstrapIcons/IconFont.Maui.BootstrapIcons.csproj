@@ -12,14 +12,16 @@
 
     <PackageId>IconFont.Maui.BootstrapIcons</PackageId>
     <Title>Bootstrap Icons for .NET MAUI</Title>
-    <Description>Provides Bootstrap Icons as a drop-in icon font for .NET MAUI applications with automatic font registration and strongly-typed glyph constants.</Description>
+    <Description>Provides Bootstrap Icons as a drop-in icon font for .NET MAUI applications with automatic font registration and strongly-typed glyph constants. Powered by IconFont.Maui.SourceGenerator.</Description>
     <Version>1.0.0-preview.1</Version>
-    <Authors>IconFontPack Contributors</Authors>
+    <Authors>David Ortinau</Authors>
     <PackageLicenseExpression>MIT</PackageLicenseExpression>
     <PackageProjectUrl>https://github.com/davidortinau/IconFont.Maui.BootstrapIcons</PackageProjectUrl>
     <RepositoryUrl>https://github.com/davidortinau/IconFont.Maui.BootstrapIcons</RepositoryUrl>
-    <PackageTags>maui;icons;font;bootstrap</PackageTags>
+    <RepositoryType>git</RepositoryType>
+    <PackageTags>maui;icons;font;bootstrap;dotnet;xamarin</PackageTags>
     <PackageReadmeFile>README.md</PackageReadmeFile>
+    <PackageReleaseNotes>https://github.com/davidortinau/IconFont.Maui.BootstrapIcons/releases</PackageReleaseNotes>
 
     <GenerateDocumentationFile>true</GenerateDocumentationFile>
     <IncludeSymbols>true</IncludeSymbols>
