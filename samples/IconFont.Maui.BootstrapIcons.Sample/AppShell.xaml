@@ -4,11 +4,36 @@
     xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
     xmlns:local="clr-namespace:IconFont.Maui.BootstrapIcons.Sample"
-    Title="IconFont.Maui.BootstrapIcons.Sample">
+    xmlns:icons="clr-namespace:IconFont.Maui.BootstrapIcons;assembly=IconFont.Maui.BootstrapIcons"
+    Title="Bootstrap Icons">
 
-    <ShellContent
-        Title="Home"
-        ContentTemplate="{DataTemplate local:MainPage}"
-        Route="MainPage" />
+    <TabBar>
+        <ShellContent Title="Icons" Route="MainPage"
+                      ContentTemplate="{DataTemplate local:MainPage}">
+            <ShellContent.Icon>
+                <FontImageSource FontFamily="{x:Static icons:BootstrapIcons.FontFamily}"
+                                 Glyph="{x:Static icons:BootstrapIcons.Grid3X3GapFill}"
+                                 Color="{AppThemeBinding Light={StaticResource Gray900}, Dark={StaticResource White}}" />
+            </ShellContent.Icon>
+        </ShellContent>
+
+        <ShellContent Title="Controls" Route="ControlsPage"
+                      ContentTemplate="{DataTemplate local:ControlsPage}">
+            <ShellContent.Icon>
+                <FontImageSource FontFamily="{x:Static icons:BootstrapIcons.FontFamily}"
+                                 Glyph="{x:Static icons:BootstrapIcons.CollectionFill}"
+                                 Color="{AppThemeBinding Light={StaticResource Gray900}, Dark={StaticResource White}}" />
+            </ShellContent.Icon>
+        </ShellContent>
+
+        <ShellContent Title="Sizing" Route="SizingPage"
+                      ContentTemplate="{DataTemplate local:SizingPage}">
+            <ShellContent.Icon>
+                <FontImageSource FontFamily="{x:Static icons:BootstrapIcons.FontFamily}"
+                                 Glyph="{x:Static icons:BootstrapIcons.AspectRatioFill}"
+                                 Color="{AppThemeBinding Light={StaticResource Gray900}, Dark={StaticResource White}}" />
+            </ShellContent.Icon>
+        </ShellContent>
+    </TabBar>
 
 </Shell>

@@ -3,7 +3,7 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:icons="clr-namespace:IconFont.Maui.BootstrapIcons;assembly=IconFont.Maui.BootstrapIcons"
              x:Class="IconFont.Maui.BootstrapIcons.Sample.MainPage"
-             Title="Bootstrap Icons">
+             Title="Icons">
 
     <ScrollView>
         <VerticalStackLayout Padding="30" Spacing="20">
@@ -18,7 +18,7 @@
 
             <!-- Icon Grid -->
             <Label Text="Common Icons" FontSize="18" FontAttributes="Bold" Margin="0,10,0,0" />
-            <Grid ColumnDefinitions="*,*,*,*" RowDefinitions="Auto,Auto,Auto,Auto,Auto,Auto"
+            <Grid ColumnDefinitions="*,*,*,*" RowDefinitions="Auto,Auto,Auto"
                   ColumnSpacing="10" RowSpacing="15">
 
                 <!-- Row 0 -->
@@ -157,6 +157,55 @@
                 </VerticalStackLayout>
             </Grid>
 
+            <!-- Icon Coloring -->
+            <Label Text="Icon Coloring" FontSize="18" FontAttributes="Bold" Margin="0,10,0,0" />
+            <Label Text="Same icon, different colors via FontImageSource.Color"
+                   FontSize="12" TextColor="Gray" />
+            <HorizontalStackLayout Spacing="15" HorizontalOptions="Center">
+                <Image WidthRequest="32" HeightRequest="32">
+                    <Image.Source>
+                        <FontImageSource Glyph="{x:Static icons:BootstrapIcons.HeartFill}"
+                                         FontFamily="{x:Static icons:BootstrapIcons.FontFamily}"
+                                         Size="32" Color="#0D6EFD" />
+                    </Image.Source>
+                </Image>
+                <Image WidthRequest="32" HeightRequest="32">
+                    <Image.Source>
+                        <FontImageSource Glyph="{x:Static icons:BootstrapIcons.HeartFill}"
+                                         FontFamily="{x:Static icons:BootstrapIcons.FontFamily}"
+                                         Size="32" Color="#198754" />
+                    </Image.Source>
+                </Image>
+                <Image WidthRequest="32" HeightRequest="32">
+                    <Image.Source>
+                        <FontImageSource Glyph="{x:Static icons:BootstrapIcons.HeartFill}"
+                                         FontFamily="{x:Static icons:BootstrapIcons.FontFamily}"
+                                         Size="32" Color="#DC3545" />
+                    </Image.Source>
+                </Image>
+                <Image WidthRequest="32" HeightRequest="32">
+                    <Image.Source>
+                        <FontImageSource Glyph="{x:Static icons:BootstrapIcons.HeartFill}"
+                                         FontFamily="{x:Static icons:BootstrapIcons.FontFamily}"
+                                         Size="32" Color="#FFC107" />
+                    </Image.Source>
+                </Image>
+                <Image WidthRequest="32" HeightRequest="32">
+                    <Image.Source>
+                        <FontImageSource Glyph="{x:Static icons:BootstrapIcons.HeartFill}"
+                                         FontFamily="{x:Static icons:BootstrapIcons.FontFamily}"
+                                         Size="32" Color="#6F42C1" />
+                    </Image.Source>
+                </Image>
+                <Image WidthRequest="32" HeightRequest="32">
+                    <Image.Source>
+                        <FontImageSource Glyph="{x:Static icons:BootstrapIcons.HeartFill}"
+                                         FontFamily="{x:Static icons:BootstrapIcons.FontFamily}"
+                                         Size="32" Color="#FD7E14" />
+                    </Image.Source>
+                </Image>
+            </HorizontalStackLayout>
+
             <!-- Buttons with icons -->
             <Label Text="Buttons with Icons" FontSize="18" FontAttributes="Bold" Margin="0,10,0,0" />
 
@@ -187,39 +236,6 @@
             <!-- C# Created Icons -->
             <Label Text="C# Created Icons" FontSize="18" FontAttributes="Bold" Margin="0,10,0,0" />
             <HorizontalStackLayout x:Name="CSharpIcons" Spacing="15" HorizontalOptions="Center" />
-
-            <!-- Sizes -->
-            <Label Text="Icon Sizes" FontSize="18" FontAttributes="Bold" Margin="0,10,0,0" />
-            <HorizontalStackLayout Spacing="15" HorizontalOptions="Center" VerticalOptions="Center">
-                <Image WidthRequest="16" HeightRequest="16">
-                    <Image.Source>
-                        <FontImageSource Glyph="{x:Static icons:BootstrapIcons.Bootstrap}"
-                                         FontFamily="{x:Static icons:BootstrapIcons.FontFamily}"
-                                         Size="16" Color="#7952B3" />
-                    </Image.Source>
-                </Image>
-                <Image WidthRequest="24" HeightRequest="24">
-                    <Image.Source>
-                        <FontImageSource Glyph="{x:Static icons:BootstrapIcons.Bootstrap}"
-                                         FontFamily="{x:Static icons:BootstrapIcons.FontFamily}"
-                                         Size="24" Color="#7952B3" />
-                    </Image.Source>
-                </Image>
-                <Image WidthRequest="32" HeightRequest="32">
-                    <Image.Source>
-                        <FontImageSource Glyph="{x:Static icons:BootstrapIcons.Bootstrap}"
-                                         FontFamily="{x:Static icons:BootstrapIcons.FontFamily}"
-                                         Size="32" Color="#7952B3" />
-                    </Image.Source>
-                </Image>
-                <Image WidthRequest="48" HeightRequest="48">
-                    <Image.Source>
-                        <FontImageSource Glyph="{x:Static icons:BootstrapIcons.Bootstrap}"
-                                         FontFamily="{x:Static icons:BootstrapIcons.FontFamily}"
-                                         Size="48" Color="#7952B3" />
-                    </Image.Source>
-                </Image>
-            </HorizontalStackLayout>
 
         </VerticalStackLayout>
     </ScrollView>

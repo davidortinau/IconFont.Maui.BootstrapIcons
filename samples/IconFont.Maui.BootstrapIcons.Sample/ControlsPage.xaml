@@ -1,0 +1,191 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:icons="clr-namespace:IconFont.Maui.BootstrapIcons;assembly=IconFont.Maui.BootstrapIcons"
+             x:Class="IconFont.Maui.BootstrapIcons.Sample.ControlsPage"
+             Title="Controls">
+
+    <ContentPage.ToolbarItems>
+        <ToolbarItem Text="Settings">
+            <ToolbarItem.IconImageSource>
+                <FontImageSource FontFamily="{x:Static icons:BootstrapIcons.FontFamily}"
+                                 Glyph="{x:Static icons:BootstrapIcons.GearFill}"
+                                 Size="20" />
+            </ToolbarItem.IconImageSource>
+        </ToolbarItem>
+        <ToolbarItem Text="Notifications">
+            <ToolbarItem.IconImageSource>
+                <FontImageSource FontFamily="{x:Static icons:BootstrapIcons.FontFamily}"
+                                 Glyph="{x:Static icons:BootstrapIcons.BellFill}"
+                                 Size="20" />
+            </ToolbarItem.IconImageSource>
+        </ToolbarItem>
+    </ContentPage.ToolbarItems>
+
+    <ScrollView>
+        <VerticalStackLayout Padding="30" Spacing="20">
+
+            <Label Text="Icons in Controls"
+                   FontSize="24" FontAttributes="Bold"
+                   HorizontalOptions="Center" />
+            <Label Text="Every way to use Bootstrap Icons in MAUI"
+                   FontSize="14" TextColor="Gray"
+                   HorizontalOptions="Center" />
+
+            <!-- Label as Icon -->
+            <Label Text="Label (Text + FontFamily)" FontSize="18" FontAttributes="Bold" Margin="0,10,0,0" />
+            <Label Text="Use the glyph directly as Label.Text with the icon FontFamily"
+                   FontSize="12" TextColor="Gray" />
+            <HorizontalStackLayout Spacing="20" HorizontalOptions="Center">
+                <VerticalStackLayout Spacing="4" HorizontalOptions="Center">
+                    <Label Text="{x:Static icons:BootstrapIcons.HouseFill}"
+                           FontFamily="{x:Static icons:BootstrapIcons.FontFamily}"
+                           FontSize="32" TextColor="#0D6EFD"
+                           HorizontalOptions="Center" />
+                    <Label Text="Blue" FontSize="10" HorizontalOptions="Center" />
+                </VerticalStackLayout>
+                <VerticalStackLayout Spacing="4" HorizontalOptions="Center">
+                    <Label Text="{x:Static icons:BootstrapIcons.HeartFill}"
+                           FontFamily="{x:Static icons:BootstrapIcons.FontFamily}"
+                           FontSize="32" TextColor="#DC3545"
+                           HorizontalOptions="Center" />
+                    <Label Text="Red" FontSize="10" HorizontalOptions="Center" />
+                </VerticalStackLayout>
+                <VerticalStackLayout Spacing="4" HorizontalOptions="Center">
+                    <Label Text="{x:Static icons:BootstrapIcons.StarFill}"
+                           FontFamily="{x:Static icons:BootstrapIcons.FontFamily}"
+                           FontSize="32" TextColor="#FFC107"
+                           HorizontalOptions="Center" />
+                    <Label Text="Yellow" FontSize="10" HorizontalOptions="Center" />
+                </VerticalStackLayout>
+                <VerticalStackLayout Spacing="4" HorizontalOptions="Center">
+                    <Label Text="{x:Static icons:BootstrapIcons.CheckCircleFill}"
+                           FontFamily="{x:Static icons:BootstrapIcons.FontFamily}"
+                           FontSize="32" TextColor="#198754"
+                           HorizontalOptions="Center" />
+                    <Label Text="Green" FontSize="10" HorizontalOptions="Center" />
+                </VerticalStackLayout>
+            </HorizontalStackLayout>
+
+            <!-- Image -->
+            <Label Text="Image (FontImageSource)" FontSize="18" FontAttributes="Bold" Margin="0,10,0,0" />
+            <Label Text="FontImageSource as Image.Source — color via FontImageSource.Color"
+                   FontSize="12" TextColor="Gray" />
+            <HorizontalStackLayout Spacing="20" HorizontalOptions="Center">
+                <Image WidthRequest="40" HeightRequest="40">
+                    <Image.Source>
+                        <FontImageSource Glyph="{x:Static icons:BootstrapIcons.Envelope}"
+                                         FontFamily="{x:Static icons:BootstrapIcons.FontFamily}"
+                                         Size="40" Color="#0D6EFD" />
+                    </Image.Source>
+                </Image>
+                <Image WidthRequest="40" HeightRequest="40">
+                    <Image.Source>
+                        <FontImageSource Glyph="{x:Static icons:BootstrapIcons.Globe}"
+                                         FontFamily="{x:Static icons:BootstrapIcons.FontFamily}"
+                                         Size="40" Color="#198754" />
+                    </Image.Source>
+                </Image>
+                <Image WidthRequest="40" HeightRequest="40">
+                    <Image.Source>
+                        <FontImageSource Glyph="{x:Static icons:BootstrapIcons.ShieldFillCheck}"
+                                         FontFamily="{x:Static icons:BootstrapIcons.FontFamily}"
+                                         Size="40" Color="#6F42C1" />
+                    </Image.Source>
+                </Image>
+            </HorizontalStackLayout>
+
+            <!-- ImageButton -->
+            <Label Text="ImageButton (FontImageSource)" FontSize="18" FontAttributes="Bold" Margin="0,10,0,0" />
+            <Label Text="Tappable icon buttons — color via FontImageSource.Color"
+                   FontSize="12" TextColor="Gray" />
+            <HorizontalStackLayout Spacing="15" HorizontalOptions="Center">
+                <ImageButton WidthRequest="48" HeightRequest="48"
+                             BackgroundColor="#0D6EFD" CornerRadius="24" Padding="8">
+                    <ImageButton.Source>
+                        <FontImageSource Glyph="{x:Static icons:BootstrapIcons.TelephoneFill}"
+                                         FontFamily="{x:Static icons:BootstrapIcons.FontFamily}"
+                                         Size="24" Color="White" />
+                    </ImageButton.Source>
+                </ImageButton>
+                <ImageButton WidthRequest="48" HeightRequest="48"
+                             BackgroundColor="#198754" CornerRadius="24" Padding="8">
+                    <ImageButton.Source>
+                        <FontImageSource Glyph="{x:Static icons:BootstrapIcons.ChatFill}"
+                                         FontFamily="{x:Static icons:BootstrapIcons.FontFamily}"
+                                         Size="24" Color="White" />
+                    </ImageButton.Source>
+                </ImageButton>
+                <ImageButton WidthRequest="48" HeightRequest="48"
+                             BackgroundColor="#DC3545" CornerRadius="24" Padding="8">
+                    <ImageButton.Source>
+                        <FontImageSource Glyph="{x:Static icons:BootstrapIcons.CameraVideoFill}"
+                                         FontFamily="{x:Static icons:BootstrapIcons.FontFamily}"
+                                         Size="24" Color="White" />
+                    </ImageButton.Source>
+                </ImageButton>
+                <ImageButton WidthRequest="48" HeightRequest="48"
+                             BackgroundColor="#6F42C1" CornerRadius="24" Padding="8">
+                    <ImageButton.Source>
+                        <FontImageSource Glyph="{x:Static icons:BootstrapIcons.EnvelopeFill}"
+                                         FontFamily="{x:Static icons:BootstrapIcons.FontFamily}"
+                                         Size="24" Color="White" />
+                    </ImageButton.Source>
+                </ImageButton>
+            </HorizontalStackLayout>
+
+            <!-- Button with text-based icon -->
+            <Label Text="Button (Icon as Text)" FontSize="18" FontAttributes="Bold" Margin="0,10,0,0" />
+            <Label Text="Glyph used directly as Button.Text with FontFamily"
+                   FontSize="12" TextColor="Gray" />
+            <HorizontalStackLayout Spacing="10" HorizontalOptions="Center">
+                <Button Text="{x:Static icons:BootstrapIcons.PlusLg}"
+                        FontFamily="{x:Static icons:BootstrapIcons.FontFamily}"
+                        FontSize="24" TextColor="White"
+                        BackgroundColor="#0D6EFD"
+                        WidthRequest="50" HeightRequest="50" CornerRadius="25" Padding="0" />
+                <Button Text="{x:Static icons:BootstrapIcons.PencilFill}"
+                        FontFamily="{x:Static icons:BootstrapIcons.FontFamily}"
+                        FontSize="24" TextColor="White"
+                        BackgroundColor="#FFC107"
+                        WidthRequest="50" HeightRequest="50" CornerRadius="25" Padding="0" />
+                <Button Text="{x:Static icons:BootstrapIcons.TrashFill}"
+                        FontFamily="{x:Static icons:BootstrapIcons.FontFamily}"
+                        FontSize="24" TextColor="White"
+                        BackgroundColor="#DC3545"
+                        WidthRequest="50" HeightRequest="50" CornerRadius="25" Padding="0" />
+            </HorizontalStackLayout>
+
+            <!-- Button with ImageSource -->
+            <Label Text="Button (Icon + Text)" FontSize="18" FontAttributes="Bold" Margin="0,10,0,0" />
+            <Label Text="FontImageSource as Button.ImageSource alongside text"
+                   FontSize="12" TextColor="Gray" />
+            <Button Text="  Save Changes" BackgroundColor="#0D6EFD" TextColor="White">
+                <Button.ImageSource>
+                    <FontImageSource Glyph="{x:Static icons:BootstrapIcons.FloppyFill}"
+                                     FontFamily="{x:Static icons:BootstrapIcons.FontFamily}"
+                                     Size="20" Color="White" />
+                </Button.ImageSource>
+            </Button>
+            <Button Text="  Share" BackgroundColor="#6F42C1" TextColor="White">
+                <Button.ImageSource>
+                    <FontImageSource Glyph="{x:Static icons:BootstrapIcons.ShareFill}"
+                                     FontFamily="{x:Static icons:BootstrapIcons.FontFamily}"
+                                     Size="20" Color="White" />
+                </Button.ImageSource>
+            </Button>
+
+            <!-- ToolbarItem note -->
+            <Label Text="ToolbarItem (see top bar ↑)" FontSize="18" FontAttributes="Bold" Margin="0,10,0,0" />
+            <Label Text="Settings and Bell icons in the toolbar use FontImageSource on ToolbarItem.IconImageSource"
+                   FontSize="12" TextColor="Gray" />
+
+            <!-- Shell Tab note -->
+            <Label Text="Shell Tabs (see bottom bar ↓)" FontSize="18" FontAttributes="Bold" Margin="0,10,0,0" />
+            <Label Text="Tab icons use FontImageSource on ShellContent.Icon"
+                   FontSize="12" TextColor="Gray" />
+
+        </VerticalStackLayout>
+    </ScrollView>
+
+</ContentPage>
