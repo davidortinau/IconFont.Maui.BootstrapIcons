@@ -10,11 +10,14 @@
 
 It registers the font across supported targets when you call `UseBootstrapIcons()` and exposes strongly-typed glyph constants (2,000+ icons) to simplify XAML and C# usage.
 
+Glyph constants are generated at build time by [`IconFont.Maui.SourceGenerator`](https://www.nuget.org/packages/IconFont.Maui.SourceGenerator) — no hand-maintained code.
+
 ### ✨ Features
 
 - ⚙️ **One-line setup**: call `builder.UseBootstrapIcons()` to register the font
 - 🔤 **Strongly-typed glyphs** via `BootstrapIcons.Search`, `BootstrapIcons.HeartFill`, etc.
 - 🧰 **Helper APIs**: `BootstrapIcons.Create()` for `FontImageSource`
+- 🔧 **Source-generated**: glyph constants emitted at compile time from the TTF binary
 - 📱 **Supported targets**: Android, iOS, Mac Catalyst
 
 ### 📦 Install
@@ -57,8 +60,23 @@ using IconFont.Maui.BootstrapIcons;
 var source = BootstrapIcons.Create(BootstrapIcons.HeartFill, Colors.Red, 32);
 ```
 
-> **Tip:** Glyph names are derived from the upstream Bootstrap Icons CSS class names.
-> `bi-heart-fill` → `BootstrapIcons.HeartFill`, `bi-arrow-right` → `BootstrapIcons.ArrowRight`.
+### 🎨 Using with Bootstrap Themes
+
+This package works great alongside [`Plugin.Maui.BootstrapTheme`](https://www.nuget.org/packages/Plugin.Maui.BootstrapTheme) — but **neither depends on the other**. Use them independently or together:
+
+```csharp
+builder.UseMauiApp<App>()
+    .UseBootstrapTheme(...)   // optional — Bootstrap theme styling
+    .UseBootstrapIcons();     // Bootstrap Icons font
+```
+
+When both are installed, use `DynamicResource` to make icons respond to theme changes:
+
+```xml
+<FontImageSource Glyph="{x:Static icons:BootstrapIcons.Search}"
+                 FontFamily="{x:Static icons:BootstrapIcons.FontFamily}"
+                 Color="{DynamicResource OnBackground}" />
+```
 
 ### 📋 Common Icons
 
@@ -77,6 +95,16 @@ var source = BootstrapIcons.Create(BootstrapIcons.HeartFill, Colors.Red, 32);
 
 Browse all 2,000+ icons at [icons.getbootstrap.com](https://icons.getbootstrap.com/).
 
+### 🏗️ Architecture
+
+This package is part of the [IconFont.Maui](https://github.com/jfversluis/IconFont.Maui.Template) ecosystem:
+
+| Package | Purpose |
+|---------|---------|
+| [`IconFont.Maui.SourceGenerator`](https://www.nuget.org/packages/IconFont.Maui.SourceGenerator) | Shared source generator — parses TTF and emits glyph constants |
+| [`IconFont.Maui.FluentIcons`](https://www.nuget.org/packages/IconFont.Maui.FluentIcons) | Fluent UI System Icons |
+| **`IconFont.Maui.BootstrapIcons`** | Bootstrap Icons (this package) |
+
 ### 🧩 Platforms
 
 | Platform | Minimum |
@@ -93,4 +121,5 @@ Browse all 2,000+ icons at [icons.getbootstrap.com](https://icons.getbootstrap.c
 ### 🙏 Attribution
 
 - Upstream font: MIT © The Bootstrap Authors
+- Source generator: [IconFont.Maui.SourceGenerator](https://github.com/jfversluis/IconFont.Maui.SourceGenerator)
 - This project is not affiliated with or endorsed by Bootstrap.
